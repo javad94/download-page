@@ -33,8 +33,9 @@
         }
         const myParam = urlParams.get('url');
         console.log(myParam);
-        document.getElementById('download').href = myParam;
-        document.getElementById('video').src = myParam;
+        decoded = atob(myParam);
+        document.getElementById('download').href = decoded;
+        document.getElementById('video').src = decoded;
     </script>
 </body>
 </html>
