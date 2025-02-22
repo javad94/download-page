@@ -28,9 +28,9 @@
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        for (let p of urlParams) {
-            console.log(p);
-        }
+        // for (let p of urlParams) {
+        //     console.log(p);
+        // }
         const myParam = urlParams.get('url');
         console.log(myParam);
         decoded = atob(myParam);
