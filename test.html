@@ -56,8 +56,8 @@
             </div>
             <!-- Instructions Cards -->
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- PC Users Card -->
-                <div class="glass-effect rounded-xl p-6 border border-gray-800 hover:border-indigo-500 transition-all duration-300">
+                <!-- PC Users Card - Hidden on mobile -->
+                <div class="hidden md:block glass-effect rounded-xl p-6 border border-gray-800 hover:border-indigo-500 transition-all duration-300">
                     <div class="flex items-center space-x-4 mb-4">
                         <i class="ri-computer-line text-2xl text-indigo-500"></i>
                         <h2 class="text-xl font-semibold text-white">PC Users</h2>
@@ -67,7 +67,7 @@
                     </p>
                 </div>
                 <!-- Mobile Users Card -->
-                <div class="glass-effect rounded-xl p-6 border border-gray-800 hover:border-indigo-500 transition-all duration-300">
+                <div class="glass-effect rounded-xl p-6 border border-gray-800 hover:border-indigo-500 transition-all duration-300 md:col-auto col-span-1">
                     <div class="flex items-center space-x-4 mb-4">
                         <i class="ri-smartphone-line text-2xl text-indigo-500"></i>
                         <h2 class="text-xl font-semibold text-white">Mobile Users</h2>
