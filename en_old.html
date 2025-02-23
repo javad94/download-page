@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Download Video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-5">Downloading Video</h2>
+        <h3 class="mt-4">For PC Users:</h3>
+        <p>For downloading this video on your PC please <b>right click</b> on the download button below and select <b>Save Link As...</b></p>
+        <h3>For Mobile Users:</h3>
+        <p>For downloading this video on your device please <b>tap and hold</b> on the download button below and select <b>Download Link</b></p>
+        <div class="text-center mt-4">
+            <a id="download" class="btn btn-success btn-lg" href="#">Download Video</a>
+            <div class="mt-2">
+                <!-- <video id="video" width="75%" height="auto" src="#" autoplay muted preload="auto">download -->
+                <!-- </video> -->
+                <!-- <video width="75%" height="auto" controls>
+                    <source id="video" src="movie.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        // for (let p of urlParams) {
+        //     console.log(p);
+        // }
+        const myParam = urlParams.get('url');
+        console.log(myParam);
+        decoded = atob(myParam);
+        document.getElementById('download').href = decoded;
+        // document.getElementById('video').src = decoded;
+    </script>
+</body>
+
+</html>

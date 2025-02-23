@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Download Video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: Vazirmatn, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-right" dir="rtl">
+        <h2 class="mt-5">راهنمای دانلود ویدیو</h2>
+        <h3 class="mt-4">برای کاربران کامپیوتر:</h3>
+        <p>برای دانلود این ویدیو روی کامپیوتر، لطفا روی دکمه دانلود ویدیو در پایین راست کلیک کرده و گزینه <b>Save Link As</b> را انتخاب نمایید. </p>
+        <h3>برای کاربران موبایل:</h3>
+        <p>برای دانلود این ویدیو روی موبایل، لطفا انگشت خود رو روی دکمه دانلود ویدیو در پایین نگه داشته و سپس گزینه <b>Download Link</b> را انتخاب نمایید. </p>
+        <div class="text-center mt-4">
+            <a id="download" class="btn btn-success btn-lg" href="#" download>دانلود ویدیو</a>
+            <!-- <div class="mt-2">
+                <video id="video" width="75%" height="auto" src="#">ویدیو
+                </video>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        // for (let p of urlParams) {
+        //     console.log(p);
+        // }
+        const myParam = urlParams.get('url');
+        console.log(myParam);
+        decoded = atob(myParam);
+        document.getElementById('download').href = decoded;
+        // document.getElementById('video').src = decoded;
+    </script>
+</body>
+
+</html>
