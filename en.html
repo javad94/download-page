@@ -90,7 +90,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const myParam = urlParams.get('url');
         console.log(myParam);
-        decoded = atob(myParam);
+        decoded = decodeURIComponent(atob(myParam));
         document.getElementById('download').href = decoded;
     </script>
 </body>
